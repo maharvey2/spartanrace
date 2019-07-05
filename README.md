@@ -1,8 +1,4 @@
-# Spartanrace
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/spartanrace`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+# Spartanrace Gem
 
 ## Installation
 
@@ -22,9 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This is CLI Demo Project
 
-Test change 
+Using HTTParty to retrieve data from the Spartan Race API and display race dates and types.
+
+
 
 ## Development
 
