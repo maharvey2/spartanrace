@@ -4,7 +4,7 @@ require "spartanrace/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "spartanrace"
-  spec.version       = Spartanrace::VERSION
+  spec.version       = SpartanRace::VERSION
   spec.authors       = ["<maharvey2>"]
   spec.email         = ["<mah0013mobile@gmail.com>"]
 
@@ -31,4 +31,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "pry"
+  spec.add_dependency "httparty"
 end

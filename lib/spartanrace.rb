@@ -1,5 +1,6 @@
 require 'pry'
 require 'httparty'
+require 'rubygems'
 
 require_relative "spartanrace/version"
 require_relative "spartanrace/cli"
