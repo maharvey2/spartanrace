@@ -9,7 +9,7 @@ def user_input
     puts "please enter zip"
     input = gets.strip.to_i
     zip = valid_input(input)
-    api = SpartanRace::API.new(zip)
+    api = SpartanRace::Scraper.new(zip)
     api.fetch_data
 end
 
