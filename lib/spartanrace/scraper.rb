@@ -8,12 +8,13 @@ class SpartanRace::Scraper
 
     def fetch_data
         url = "https://api2.spartan.com/api/races/search/?place=yes&limit=1&query=#{@zip}"
-        format :json
+        #format :json
         response = HTTParty.get(url)
+        json = JSON.parse(response.body)
         binding.pry
     end
 
-    
+
 
 end
 
