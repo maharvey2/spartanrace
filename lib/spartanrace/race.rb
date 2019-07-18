@@ -1,5 +1,5 @@
 class SpartanRace::Race
-    attr_accessor :race, :name
+    attr_accessor :race, :name, :start_date, :city, :date, :venue_description
 
     @@all =[]
 
@@ -8,8 +8,8 @@ class SpartanRace::Race
         save
     end
 
-    def self.new_from_collection(unparesed_page)
-        unparesed_page.each do |attrs|
+    def self.new_from_collection(race_data)
+        race_data.each do |attrs|
             new(attrs)
     end
 end
@@ -21,7 +21,7 @@ end
     end
 
     def self.fetch_data
-        SpartanRace::Scraper.fetch_data
+        SpartanRace::Scraper.self.fetch_data
         all
     end
 
