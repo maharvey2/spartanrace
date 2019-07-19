@@ -3,7 +3,6 @@ class SpartanRace::CLI
 def call
     puts "Welcome to SpartanRace Gem!\n"
     user_input
-    show_race
 end
 
 def user_input
@@ -20,9 +19,6 @@ def valid_input(input)
     input = gets.strip.to_i
   end
   input
-end
-
-def show_race
 end
 
 end

@@ -11,8 +11,7 @@ class SpartanRace::Scraper
         #format :json
         response = HTTParty.get(url)
         #json = JSON.parse(response.body)
-        p response["races"]
-        #SpartanRace::Race.new_from_collection
+        #p response["races"]
     end
 
 

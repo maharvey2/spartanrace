@@ -1,4 +1,3 @@
-=begin
 class SpartanRace::Race
     attr_accessor :race, :name, :start_date, :city, :date, :venue_description
 
@@ -9,8 +8,8 @@ class SpartanRace::Race
         save
     end
 
-    def self.new_from_collection(race_data)
-        race_data.each do |attrs|
+    def self.new_from_collection(response)
+        fetch_data.each do |attrs|
             new(attrs)
     end
 end
@@ -35,8 +34,4 @@ end
         @@all << self
     end
 
-
-
-
 end
-=end
