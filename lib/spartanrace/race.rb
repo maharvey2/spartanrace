@@ -1,10 +1,37 @@
-#begin 
+=begin 
 class SpartanRace::Race
-    attr_accessor :race, :name, :start_date, :city, :date, :venue_description
+    attr_accessor :races, :name, :start_date, :city, :zip, :venue_description
 
     @@all =[]
 
-    def initialize(attrs)
+    def initialize(race_hash)
+        @races = []
+        @name = name
+        @start_date = start_date
+        @city = city
+        save
+    end
+
+    def self.all
+        SpartanRace::Scraper.fetch_data if @@all.empty?
+        @@all
+    end
+
+    def get_races
+        SpartanRace::Scraper.fetch_data(self) if @races.empty?
+    end
+
+    def save
+        @@all << self
+    end
+end
+=end
+
+
+
+
+=begin
+def initialize(attrs)
         attrs_from_hash(attrs)
         save
     end
@@ -34,6 +61,4 @@ end
     def save
         @@all << self
     end
-
-end
-#end
+=end

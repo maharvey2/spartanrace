@@ -1,7 +1,9 @@
 require 'pry'
 require 'httparty'
 require 'rubygems'
-require 'nokogiri'
+require 'rest_client'
+require 'json'
+
 
 require_relative "spartanrace/version"
 require_relative "spartanrace/cli"

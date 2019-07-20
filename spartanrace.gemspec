@@ -33,5 +33,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "pry"
   spec.add_development_dependency  "httparty"
-  spec.add_development_dependency  "nokogiri"
+  spec.add_development_dependency  "rest-client"
+  spec.add_development_dependency  "json"
 end
