@@ -1,4 +1,4 @@
-=begin 
+#begin 
 class SpartanRace::Race
     attr_accessor :races, :name, :start_date, :city, :zip, :venue_description
 
@@ -25,7 +25,7 @@ class SpartanRace::Race
         @@all << self
     end
 end
-=end
+#end
 
 
 

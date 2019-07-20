@@ -3,7 +3,7 @@ class SpartanRace::CLI
 def call
     puts "Welcome to SpartanRace Gem!\n"
     user_input
-    #binding.pry
+    binding.pry
 end
 
 def user_input
