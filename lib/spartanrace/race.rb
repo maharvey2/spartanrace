@@ -1,3 +1,4 @@
+#begin 
 class SpartanRace::Race
     attr_accessor :race, :name, :start_date, :city, :date, :venue_description
 
@@ -35,3 +36,4 @@ end
     end
 
 end
+#end
