@@ -6,7 +6,7 @@ class SpartanRace::Scraper
         @zip = zip
     end
 
-    def fetch_data
+    def self.get_races
         url = "https://api2.spartan.com/api/races/search/?place=yes&limit=10&query=#{@zip}"
         #format :json
         response = HTTParty.get(url)
@@ -16,9 +16,6 @@ class SpartanRace::Scraper
         parsed_response = JSON.parse(response&.body || "{}")
 
     end
-
-
-
 end
 
 

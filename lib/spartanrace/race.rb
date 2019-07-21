@@ -13,12 +13,12 @@ class SpartanRace::Race
     end
 
     def self.all
-        SpartanRace::Scraper.fetch_data if @@all.empty?
+        SpartanRace::Scraper.get_races if @@all.empty?
         @@all
     end
 
     def get_races
-        SpartanRace::Scraper.fetch_data(self) if @races.empty?
+        SpartanRace::Scraper.get_races(self) if @races.empty?
     end
 
     def save
