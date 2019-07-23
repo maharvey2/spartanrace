@@ -3,7 +3,6 @@ class SpartanRace::CLI
 def call
     puts "Welcome to SpartanRace Gem!\n"
     user_input
-    #valid_input
     list_races
     #binding.pry
 end
@@ -13,7 +12,7 @@ def user_input
     input = gets.strip.to_i
     zip = valid_input(input)
     api = SpartanRace::Scraper.new(zip)
-    #api.fetch_data
+    api.get_races
 end
 
 def valid_input(input)
@@ -25,7 +24,7 @@ def valid_input(input)
 end
 
 def list_races
-  SpartanRace::Race.all.each
+  p "look data"
 end
 
 end
