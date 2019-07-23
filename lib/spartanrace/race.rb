@@ -1,5 +1,5 @@
 class SpartanRace::Race
-    attr_accessor :int_id, :id, :alias, :name
+    attr_accessor :int_id, :id, :name, :full_image_url, :start_date, :city, :state, :zip, :country_code, :country, :venue_description, :categories, :events
 
     @@all = []
 
