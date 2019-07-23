@@ -4,6 +4,7 @@ def call
     puts "Welcome to SpartanRace Gem!\n"
     user_input
     list_races
+    race_data
     #binding.pry
 end
 
@@ -24,8 +25,16 @@ def valid_input(input)
 end
 
 def list_races
-  puts "look data!"
+  puts "\nHere are 10 nearby races!"
   SpartanRace::Race.all.each{|s| puts "#{s.int_id}. #{s.name}"}  
+end
+
+def race_data
+  puts "\nWould you like to know more?\n"
+  input = gets.strip.to_i
+  race = SpartanRace::Race.find_by_id(input)
+  p race
+  #binding.pry
 end
 
 end
