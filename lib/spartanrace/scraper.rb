@@ -12,14 +12,9 @@ class SpartanRace::Scraper
         response = HTTParty.get(url)
         #p response.parsed_response
         #json = JSON.parse(response)
-        #p response["races"]
-        #parsed_response = JSON.parse(response&.body || "{}")
+        race = response["races"]
+        SpartanRace::Race.new_from_collection(race)
     end
-
-    def race_data
-        binding.pry
-    end
-
 end
 
 

@@ -24,7 +24,7 @@ def valid_input(input)
 end
 
 def list_races
-  p "look data"
+  p "look data!"  
 end
 
 end

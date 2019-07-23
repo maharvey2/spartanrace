@@ -1,46 +1,24 @@
-=begin 
 class SpartanRace::Race
-    attr_accessor :races, :name, :start_date, :city, :zip, :venue_description
+    attr_accessor :int_id, :id, :alias, :name
 
-    @@all =[]
-
-    def initialize(race_hash)
-        @races = []
-        @name = name
-        @start_date = start_date
-        @city = city
-        save
-    end
-
-    def self.all
-        SpartanRace::Scraper.get_races if @@all.empty?
-        @@all
-    end
-
-    def get_races
-        SpartanRace::Scraper.get_races(self) if @races.empty?
-    end
-
-    def save
-        @@all << self
-    end
-end
-=end
+    @@all = []
 
 
-
-
-=begin
-def initialize(attrs)
+    def initialize(attrs)
+        set_int_id
         attrs_from_hash(attrs)
         save
     end
 
-    def self.new_from_collection(response)
-        fetch_data.each do |attrs|
-            new(attrs)
+    def set_int_id
+        @int_id = @@all.length + 1
     end
-end
+
+    def self.new_from_collection(race)
+        race.each do |attrs|
+            new(attrs)
+        end
+    end
 
     def attrs_from_hash(attrs)
         attrs.each do |k, v|
@@ -49,7 +27,7 @@ end
     end
 
     def self.fetch_data
-        SpartanRace::Scraper.self.fetch_data
+        SpartanRace::Scraper.get_races
         all
     end
 
@@ -61,4 +39,9 @@ end
     def save
         @@all << self
     end
-=end
+
+    def self.find_by_id(input)
+        all.find{|s| s.int_id == input.to_i}
+      end
+
+end
