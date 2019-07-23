@@ -24,7 +24,8 @@ def valid_input(input)
 end
 
 def list_races
-  p "look data!"  
+  puts "look data!"
+  SpartanRace::Race.all.each{|s| puts "#{s.int_id}. #{s.name}"}  
 end
 
 end
