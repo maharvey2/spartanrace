@@ -26,14 +26,21 @@ end
 
 def list_races
   puts "\nHere are 10 nearby races!"
-  SpartanRace::Race.all.each{|s| puts "#{s.int_id}. #{s.name}"}  
+  SpartanRace::Race.all.each{|sr| puts "#{sr.int_id}. #{sr.name}. #{sr.state}."}
+  puts "\nWould you like to know more?\n"
+  @option = gets.strip.to_i  
 end
 
 def race_data
-  puts "\nWould you like to know more?\n"
-  input = gets.strip.to_i
-  race = SpartanRace::Race.find_by_id(input)
-  p race
+  #puts "\nWould you like to know more?\n"
+  #option = gets.strip.to_i
+  race = SpartanRace::Race.find_by_id(@option)
+  #p race
+  puts race.name
+  puts race.city
+  puts race.state
+  puts race.start_date
+  p race.venue_description
   #binding.pry
 end
 
