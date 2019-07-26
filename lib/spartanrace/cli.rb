@@ -34,13 +34,13 @@ end
 def race_data
   #puts "\nWould you like to know more?\n"
   #option = gets.strip.to_i
-  race = SpartanRace::Race.find_by_id(@option)
+  individual_race = SpartanRace::Race.find_by_id(@option)
   #p race
-  puts race.name
-  puts race.city
-  puts race.state
-  puts race.start_date
-  p race.venue_description
+  puts individual_race.name
+  puts individual_race.city
+  puts individual_race.state
+  puts individual_race.start_date
+  p individual_race.venue_description
   #binding.pry
 end
 
