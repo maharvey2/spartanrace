@@ -27,7 +27,7 @@ end
 def list_races
   puts "\nHere are 10 nearby races!"
   SpartanRace::Race.all.each{|sr| puts "#{sr.int_id}. #{sr.name}. #{sr.state}."}
-  puts "\nWould you like to know more?\n"
+  puts "\nWould you like to know more?\nSelect a race between 1-10\n"
   @option = gets.strip.to_i  
 end
 
@@ -46,4 +46,3 @@ end
 
 end
 
-#fixing messed up laptop
