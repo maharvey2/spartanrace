@@ -9,7 +9,7 @@ def call
 end
 
 def user_input
-    puts "please enter zip"
+    puts "Please Enter Zip to Find a Race Near you"
     input = gets.strip.to_i
     zip = valid_input(input)
     api = SpartanRace::Scraper.new(zip)
@@ -27,7 +27,7 @@ end
 def list_races
   puts "\nHere are 10 nearby races!"
   SpartanRace::Race.all.each{|sr| puts "#{sr.int_id}. #{sr.name}. #{sr.state}."}
-  puts "\nWould you like to know more?\nSelect a race between 1-10\n"
+  puts "\nWould you like to know more?\nSelect a race between 1-10\n or 'quit' to leave "
   @option = gets.strip.to_i  
 end
 
@@ -40,7 +40,6 @@ def race_data
   puts individual_race.city
   puts individual_race.state
   puts individual_race.start_date
-  p individual_race.venue_description
   #binding.pry
 end
 
