@@ -28,7 +28,8 @@ class SpartanRace::CLI
   def list_races
     puts "\nHere are nearby races!"
     SpartanRace::Race.all.each { |sr| puts "#{sr.int_id}. #{sr.name}. #{sr.state}." }
-    puts "\nWould you like to know more?\nSelect a race between 1-10\n or 'quit' to leave "
+    puts "\nWould you like to know more?"
+    puts "Select a Race by number or 'quit' to leave "
     @option = gets.strip.to_i
   end
 
@@ -41,6 +42,7 @@ class SpartanRace::CLI
     puts individual_race.city
     puts individual_race.state
     puts individual_race.start_date
+    puts individual_race.venue_description
     # binding.pry
   end
 end
