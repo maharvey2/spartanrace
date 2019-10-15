@@ -1,12 +1,17 @@
 # frozen_string_literal: true
 
 class SpartanRace::CLI
-  def call
+  def start
     puts "Welcome to SpartanRace Gem!\n"
     user_input
+    menu
+    work_flow
+    # binding.pry
+  end
+
+  def menu
     list_races
     race_data
-    # binding.pry
   end
 
   def user_input
@@ -42,7 +47,8 @@ class SpartanRace::CLI
     puts individual_race.city
     puts individual_race.state
     puts individual_race.start_date
-    puts individual_race.venue_description
+    puts ""
+    #puts individual_race.venue_description
     # binding.pry
   end
 end
