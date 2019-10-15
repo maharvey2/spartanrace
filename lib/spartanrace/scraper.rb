@@ -15,3 +15,4 @@ class SpartanRace::Scraper
       race_object = Race.new
   end
 end
+end
