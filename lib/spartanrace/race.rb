@@ -43,5 +43,5 @@ class SpartanRace::Race
 
   def self.find_by_id(input)
     all.find { |s| s.int_id == input.to_i }
-    end
+  end
 end
