@@ -3,8 +3,16 @@ class SpartanRace::CLI
   def start
     puts "Welcome to SpartanRace Gem!\n"
     user_input
+    menu
+  end
+
+  def menu
     list_races
     race_data
+<<<<<<< HEAD
+=======
+    start_over
+>>>>>>> postbreak
   end
 
   def user_input
@@ -27,7 +35,7 @@ class SpartanRace::CLI
     puts "\nHere are nearby races!"
     SpartanRace::Race.all.each { |sr| puts "#{sr.int_id}. #{sr.name}. #{sr.state}." }
     puts "\nWould you like to know more?"
-    puts "Select a Race by number or 'quit' to leave "
+    puts "Select a Race by number or 'quit' to leave\n "
     @option = gets.strip.to_i
   end
 
@@ -37,6 +45,14 @@ class SpartanRace::CLI
     puts individual_race.city
     puts individual_race.state
     puts individual_race.start_date
+<<<<<<< HEAD
     puts individual_race.venue_description
+=======
+>>>>>>> postbreak
   end
+
+  def start_over
+    menu 
+  end
+
 end
