@@ -9,10 +9,7 @@ class SpartanRace::CLI
   def menu
     list_races
     race_data
-<<<<<<< HEAD
-=======
     start_over
->>>>>>> postbreak
   end
 
   def user_input
@@ -45,10 +42,7 @@ class SpartanRace::CLI
     puts individual_race.city
     puts individual_race.state
     puts individual_race.start_date
-<<<<<<< HEAD
     puts individual_race.venue_description
-=======
->>>>>>> postbreak
   end
 
   def start_over
