@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 class SpartanRace::CLI
   def start
     puts "Welcome to SpartanRace Gem!\n"
