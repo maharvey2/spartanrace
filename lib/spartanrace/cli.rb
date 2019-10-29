@@ -37,11 +37,11 @@ class SpartanRace::CLI
 
   def race_data
     individual_race = SpartanRace::Race.find_by_id(@option)
-    puts individual_race.name
-    puts individual_race.city
-    puts individual_race.state
-    puts individual_race.start_date
-    puts individual_race.venue_description
+    puts "\n#{individual_race.name}"
+    puts "#{individual_race.city}"
+    puts "#{individual_race.state}"
+    puts "#{individual_race.start_date}"
+    puts "#{individual_race.venue_description.gsub!(/<\/?[^>]*>/, "")}"
   end
 
   def start_over
