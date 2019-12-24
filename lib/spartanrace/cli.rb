@@ -7,6 +7,7 @@ class SpartanRace::CLI
 
   def menu
     list_races
+    get_option
     race_data
     start_over
   end
@@ -30,6 +31,9 @@ class SpartanRace::CLI
   def list_races
     puts "\nHere are nearby races!"
     SpartanRace::Race.all.each { |sr| puts "#{sr.int_id}. #{sr.name}. #{sr.state}." }
+  end
+
+  def get_option
     puts "\nWould you like to know more?"
     puts "Select a Race by number or 'quit' to leave\n "
     @option = gets.strip.to_i
