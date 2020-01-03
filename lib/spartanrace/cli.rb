@@ -21,15 +21,17 @@ class SpartanRace::CLI
 
     when "again"
     list_races
+    
     when "no"
       puts "\nnot sure what to do"
       exit
+
+    when "quit"
+      puts "looks also quit"
+      exit
+      
     end
   end
-    #list_races
-    #get_option
-    #race_data
-    #start_over
   end
 
   def user_input
