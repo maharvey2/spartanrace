@@ -6,7 +6,7 @@ class SpartanRace::CLI
   end
 
   def menu
-    puts "Would you to race?"
+    puts "Would you to race?\n"
     puts "yes or no?"
 
   input = ""
@@ -22,7 +22,7 @@ class SpartanRace::CLI
     when "again"
     list_races
     when "no"
-      puts "not sure what to do"
+      puts "\nnot sure what to do"
       exit
     end
   end
@@ -70,7 +70,7 @@ class SpartanRace::CLI
     puts "#{individual_race.state}"
     puts "#{individual_race.start_date}"
     puts "#{individual_race.venue_description.gsub!(/<\/?[^>]*>/, "")}"
-    puts "try again? (again)"
+    puts "\ntry again? (again)"
   end
 
   def start_over
