@@ -30,6 +30,9 @@ class SpartanRace::CLI
       puts "looks also quit"
       exit
       
+    else
+      puts "please try again"
+
     end
   end
   end
