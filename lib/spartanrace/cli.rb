@@ -23,11 +23,11 @@ class SpartanRace::CLI
     list_races
     
     when "no"
-      puts "\nnot sure what to do"
+      puts "\ngoodbye"
       exit
 
     when "quit"
-      puts "looks also quit"
+      puts "goodbye"
       exit
       
     else
