@@ -2,10 +2,13 @@ class SpartanRace::CLI
   def start
     puts "Welcome to SpartanRace Gem!\n"
     user_input
-    menu
   end
 
   def menu
+  input = ""
+
+  while input != "quit"
+
     list_races
     get_option
     race_data
@@ -18,6 +21,7 @@ class SpartanRace::CLI
     zip = valid_input(input)
     api = SpartanRace::Scraper.new(zip)
     api.get_races
+    menu
   end
 
   def valid_input(input)
