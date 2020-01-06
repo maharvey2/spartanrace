@@ -26,11 +26,11 @@ class SpartanRace::CLI
       exit
 
     when "quit"
-      puts "goodbye"
+      puts "\ngoodbye"
       exit
       
     else
-      puts "please try again"
+      puts "\nplease try again"
 
     end
   end
