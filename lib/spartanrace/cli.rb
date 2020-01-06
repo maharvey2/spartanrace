@@ -61,15 +61,15 @@ class SpartanRace::CLI
   end
 
   def get_option
-    input = @option
+    input = @opNum
     puts "\nWould you like to know more?"
     puts "Select a Race by number or 'quit' to leave\n "
-    @option = gets.strip.to_i
+    @opNum = gets.strip.to_i
     race_data
   end
 
   def race_data
-    individual_race = SpartanRace::Race.find_by_id(@option)
+    individual_race = SpartanRace::Race.find_by_id(@opNum)
     puts "\n#{individual_race.name}"
     puts "#{individual_race.city}"
     puts "#{individual_race.state}"
