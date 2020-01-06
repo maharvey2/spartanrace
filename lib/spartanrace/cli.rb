@@ -61,12 +61,20 @@ class SpartanRace::CLI
   end
 
   def get_option
-    input = @opNum
+    input = gets.strip.to_i
     puts "\nWould you like to know more?"
     puts "Select a Race by number or 'quit' to leave\n "
-    @opNum = gets.strip.to_i
+    @opNum = valid_option(input)
     race_data
   end
+
+  def valid_option(input)
+    until input >= 1 && input <= 10
+      puts "Nope"
+      input = gets.strip.to_i
+  end
+  input
+end
 
   def race_data
     individual_race = SpartanRace::Race.find_by_id(@opNum)
