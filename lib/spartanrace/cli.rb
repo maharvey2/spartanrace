@@ -1,12 +1,11 @@
 class SpartanRace::CLI
   def start
-    puts "Welcome to SpartanRace Gem!\n"
-    #user_input
+    puts "Welcome to SpartanRace Gem!"
     menu
   end
 
   def menu
-    puts "Would you to race?\n"
+    puts "\nWould you like to race?\n"
     puts "yes or no?"
 
   input = ""
@@ -38,7 +37,7 @@ class SpartanRace::CLI
   end
 
   def user_input
-    puts 'Please Enter Zip to Find a Race Near you'
+    puts "\nPlease Enter Zip to Find a Race Near you"
     input = gets.strip.to_i
     zip = valid_input(input)
     api = SpartanRace::Scraper.new(zip)
@@ -61,9 +60,9 @@ class SpartanRace::CLI
   end
 
   def get_option
-    input = gets.strip.to_i
     puts "\nWould you like to know more?"
     puts "Select a Race by number or 'quit' to leave\n "
+    input = gets.strip.to_i
     @opNum = valid_option(input)
     race_data
   end
@@ -83,7 +82,7 @@ end
     puts "#{individual_race.state}"
     puts "#{individual_race.start_date}"
     puts "#{individual_race.venue_description.gsub!(/<\/?[^>]*>/, "")}"
-    puts "\ntry again? (again)"
+    puts "\nTry again? (again) or close the app? (quit)"
   end
 
   def start_over
