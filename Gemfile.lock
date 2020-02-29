@@ -25,7 +25,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    rake (10.5.0)
+    rake (13.0.1)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -55,7 +55,7 @@ DEPENDENCIES
   httparty
   json
   pry
-  rake (~> 10.0)
+  rake (~> 13.0)
   rest-client
   rspec (~> 3.0)
   spartanrace!
