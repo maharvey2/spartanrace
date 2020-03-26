@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class SpartanRace::Scraper
+class SpartanRace::API
   attr_accessor :zip
 
   def initialize(zip)

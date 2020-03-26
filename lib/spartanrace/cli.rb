@@ -40,7 +40,7 @@ class SpartanRace::CLI
     puts "\nPlease Enter Zip to Find a Race Near you"
     input = gets.strip.to_i
     zip = valid_input(input)
-    api = SpartanRace::Scraper.new(zip)
+    api = SpartanRace::API.new(zip)
     api.get_races
     list_races
   end

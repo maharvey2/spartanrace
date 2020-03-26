@@ -8,7 +8,7 @@ require 'json'
 
 require_relative 'spartanrace/version'
 require_relative 'spartanrace/cli'
-require_relative 'spartanrace/scraper'
+require_relative 'spartanrace/API'
 require_relative 'spartanrace/race'
 
 module SpartanRace

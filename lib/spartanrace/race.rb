@@ -28,7 +28,7 @@ class SpartanRace::Race
   end
 
   def self.fetch_data
-    SpartanRace::Scraper.get_races
+    SpartanRace::API.get_races
     all
   end
 
