@@ -25,11 +25,6 @@ class SpartanRace::Race
     end
   end
 
-  def self.fetch_data
-    SpartanRace::API.get_races
-    all
-  end
-
   def self.all
     fetch_data if @@race_info_hash == []
     @@race_info_hash

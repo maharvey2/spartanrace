@@ -62,7 +62,7 @@ class SpartanRace::CLI
 #also checks valid_option for a number between 1-10
   def get_option
     puts "\nWould you like to know more?"
-    puts "Select a Race by number (1-10\n "
+    puts "Select a Race by number (1-10)\n "
     input = gets.strip.to_i
     @opNum = valid_option(input)
     race_data
@@ -75,7 +75,7 @@ class SpartanRace::CLI
   end
   input
 end
-
+#the useful information 
   def race_data
     individual_race = SpartanRace::Race.find_by_id(@opNum)
     puts "\n#{individual_race.name}"
