@@ -11,8 +11,7 @@ class SpartanRace::API
     url = "https://api2.spartan.com/api/races/search/?place=yes&limit=10&query=#{@zip}"
     response = HTTParty.get(url)
     race = response['races']
- #   race.each do |run|
-#      race_object = Race.new
+
 SpartanRace::Race.new_from_collection(race)
   end
 end

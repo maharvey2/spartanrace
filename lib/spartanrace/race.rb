@@ -3,7 +3,7 @@
 class SpartanRace::Race
   attr_accessor :int_id, :id, :name, :full_image_url, :start_date, :city, :state, :zip, :country_code, :country, :venue_description, :categories, :events
 
-  @@all = []
+  @@race_info_hash = []
 
   def initialize(attrs)
     set_int_id
@@ -12,7 +12,7 @@ class SpartanRace::Race
   end
 
   def set_int_id
-    @int_id = @@all.length + 1
+    @int_id = @@race_info_hash.length + 1
   end
 
   def self.new_from_collection(race)
@@ -33,12 +33,12 @@ class SpartanRace::Race
   end
 
   def self.all
-    fetch_data if @@all == []
-    @@all
+    fetch_data if @@race_info_hash == []
+    @@race_info_hash
   end
 
   def save
-    @@all << self
+    @@race_info_hash << self
   end
 
   def self.find_by_id(input)

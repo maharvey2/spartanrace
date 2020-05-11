@@ -46,7 +46,7 @@ class SpartanRace::CLI
   end
 
   def valid_input(input)
-    until input >= 0o0501 && input <= 99_950
+    until input >= 000501 && input <= 99950
       puts 'please enter valid zip code'
       input = gets.strip.to_i
     end
@@ -58,7 +58,8 @@ class SpartanRace::CLI
     SpartanRace::Race.all.each { |sr| puts "#{sr.int_id}. #{sr.name}. #{sr.state}." }
     get_option
   end
-
+#asks the users input for further infomation of the race.
+#also checks valid_option for a number between 1-10
   def get_option
     puts "\nWould you like to know more?"
     puts "Select a Race by number (1-10\n "
@@ -66,7 +67,7 @@ class SpartanRace::CLI
     @opNum = valid_option(input)
     race_data
   end
-
+#the choice needs to be between 1-10 as an integer.
   def valid_option(input)
     until input >= 1 && input <= 10
       puts "please try a number (1-10)"
