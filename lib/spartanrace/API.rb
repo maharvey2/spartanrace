@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class SpartanRace::API
   attr_accessor :zip
 
