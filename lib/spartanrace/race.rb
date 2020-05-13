@@ -6,7 +6,6 @@ class SpartanRace::Race
   def initialize(attrs)
     set_int_id
     attrs_from_hash(attrs)
-    #save
     @@race_info_hash << self
   end
 
@@ -30,10 +29,6 @@ class SpartanRace::Race
     fetch_data if @@race_info_hash == []
     @@race_info_hash
   end
-
-  #def save
-  #  @@race_info_hash << self
-  #end
 
   def self.find_by_id(input)
     all.find { |s| s.int_id == input.to_i }
