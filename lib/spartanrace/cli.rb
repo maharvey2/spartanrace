@@ -70,7 +70,7 @@ class SpartanRace::CLI
 #the choice needs to be between 1-10 as an integer.
   def valid_option(input)
     until input >= 1 && input <= 10
-      puts "please try a number (1-10)"
+      puts "please try a number (1-10)\n"
       input = gets.strip.to_i
   end
   input
